@@ -1,289 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#17120d">
-<title>KORE DECOR | Luxury Furniture Pune</title>
-<meta name="description" content="KORE DECOR — luxury sofas, centre tables, beds, swings, wardrobes and custom furniture in Wagholi, Pune.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KORE DECOR | Site Removed</title>
+  <meta name="description" content="This Kore Decor static site content has been removed.">
+  <style>
+    :root {
+      --bg: #17120d;
+      --panel: #201a16;
+      --line: rgba(255,255,255,0.12);
+      --text: #f5efe8;
+      --muted: #d7c7b6;
+      --accent: #d8b08a;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: min(640px, 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 42px 28px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.26);
+      text-align: center;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      letter-spacing: 0.2em;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+    }
+    p {
+      margin: 0 auto;
+      max-width: 35rem;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+  </style>
 </head>
 <body>
-<div class="pageLoader" id="pageLoader"><div class="loaderBrand">KORE <span>DECOR</span></div><div class="loaderLine"><i></i></div></div>
-<div class="cursorGlow" id="cursorGlow"></div>
-
-<div class="topline" id="topline"></div>
-
-<header class="nav" id="nav">
-  <a class="brand" href="#home">KORE<small>DECOR • LUXURY FURNITURE</small></a>
-  <nav class="navlinks">
-    <a href="#home">Home</a><a href="#collections">Collections</a><a href="#catalog">Furniture</a><a href="#custom">Custom</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a>
-  </nav>
-  <div class="navtools">
-    <button class="search" onclick="openSearch()" aria-label="Search">⌕</button>
-    <button class="cta" onclick="openInquiry('General Enquiry')">Get a Quote →</button>
-    <button class="hamb" onclick="openDrawer()" aria-label="Menu">☰</button>
-  </div>
-</header>
-
-<section class="hero reveal" id="home">
-  <div class="heroPhoto"></div>
-<div class="wrap">
-    <div class="heroContent">
-      <div class="kicker">KORE DECOR · PREMIUM FURNITURE STUDIO</div>
-      <h1>Elevate Your<br>Living <em>Space.</em></h1>
-      <p class="heroText">Thoughtfully crafted sofas, beds, centre tables and bespoke furniture, created to bring refined comfort and timeless character to your home.</p>
-      <div class="heroButtons">
-        <a class="lightBtn" href="#collections">Explore Collections →</a>
-        <button class="lineBtn" onclick="openInquiry('Design Consultation')">Book a Consultation</button>
-      </div>
-    </div>
-  </div>
-  <div class="heroBottom">
-    <div class="stats">
-      <div class="stat"><b>10+</b><span>Years Experience</span></div>
-      <div class="stat"><b>5000+</b><span>Homes Furnished</span></div>
-      <div class="stat"><b>100%</b><span>Made to Order</span></div>
-    </div>
-    <div class="scroll">SCROLL TO DISCOVER ↓</div>
-  </div>
-</section>
-
-<section class="section reveal" id="collections">
-<div class="wrap">
-  <div class="sectionTop">
-    <div><div class="eyebrow">01 · Collections</div><h2 class="sectionTitle">Choose your<br>kind of comfort.</h2></div>
-    <p class="sectionLead">Select a category to enter its dedicated collection. Browse pieces, compare prices and send an enquiry directly to KORE DECOR.</p>
-  </div>
-  <div class="categoryRail" id="categoryRail"></div>
-</div>
-</section>
-
-
-<section class="latestDrops reveal" id="latestDrops">
-  <div class="wrap">
-    <div class="latestHeader">
-      <div>
-        <div class="eyebrow">KORE DECOR · FEATURED COLLECTIONS</div>
-        <h2>Shop by <em>Collection</em></h2>
-      </div>
-      <button class="latestArrow" onclick="scrollToCatalog()">View All Furniture →</button>
-    </div>
-    <div class="featuredCollections" id="featuredCollections"></div>
-    <div class="latestTabs" id="latestTabs"></div>
-    <div class="latestRail" id="latestRail"></div>
-  </div>
-</section>
-
-<section class="section catalog reveal" id="catalog">
-<div class="wrap">
-  <div class="catalogHead">
-    <div><div class="eyebrow">02 · Furniture gallery</div><h2 class="sectionTitle" id="catalogTitle">Sofas</h2></div>
-    <div class="filters" id="filters"></div>
-  </div>
-  <div class="grid" id="productGrid"></div>
-</div>
-</section>
-
-
-<section class="section custom reveal" id="custom">
-<div class="wrap customGrid">
-  <div class="customImage"></div>
-  <div>
-    <div class="eyebrow">04 · Custom studio</div>
-    <h2>Your idea.<br>Our craft.</h2>
-    <p>Send a reference photo, sketch or simply tell us what you need. Our team can shape the size, fabric, colour, wood finish and detailing around your space.</p>
-    <div class="pills"><span class="pill">Custom Dimensions</span><span class="pill">Fabric Selection</span><span class="pill">Wood Finish</span><span class="pill">Design Consultation</span></div>
-    <button class="lightBtn" style="border:1px solid #c9b39c" onclick="openInquiry('Custom Furniture')">Start Your Custom Project →</button>
-  </div>
-</div>
-</section>
-
-<section class="services reveal">
-<div class="wrap serviceGrid">
-  <div class="service"><div class="serviceIcon">✦</div><h4>Premium Quality</h4><p>Built with carefully selected materials.</p></div>
-  <div class="service"><div class="serviceIcon">⌘</div><h4>Custom Designs</h4><p>Made around your home and lifestyle.</p></div>
-  <div class="service"><div class="serviceIcon">♧</div><h4>Free Consultation</h4><p>Get practical design guidance.</p></div>
-  <div class="service"><div class="serviceIcon">→</div><h4>On-Time Delivery</h4><p>Planned and coordinated with you.</p></div>
-</div>
-</section>
-
-<section class="section reveal" id="gallery">
-<div class="wrap">
-  <div class="sectionTop"><div><div class="eyebrow">05 · Our work</div><h2 class="sectionTitle">Made for<br>beautiful spaces.</h2></div><p class="sectionLead">A visual collection of interiors and furniture inspiration. Replace these demo images with your real KORE DECOR project photography.</p></div>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=90" alt="Luxury interior">
-    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=90" alt="Bedroom interior">
-    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=90" alt="Living room">
-    <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1000&q=90" alt="Furniture">
-    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=90" alt="Interior">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=90" alt="Luxury furniture">
-  </div>
-</div>
-</section>
-
-<section class="section reviewSection reveal" id="reviews">
-<div class="wrap reviewGrid">
-  <div class="reviewIntro">
-    <div class="eyebrow">06 · Customer stories</div>
-    <h2>Real homes.<br>Real reviews.</h2>
-    <p>Customers can share their experience with a rating, written review and optional photo. New customer reviews appear here automatically.</p>
-    <button class="lightBtn" style="border:1px solid #c9b39c" onclick="openReview()">Write a Review →</button>
-  </div>
-  <div class="reviews" id="reviewsList"></div>
-</div>
-</section>
-
-<footer class="footer" id="contact">
-<div class="wrap">
-  <div class="footerGrid">
-    <div><div class="eyebrow">07 · Visit / enquire</div><h2>Let's make your space remarkable.</h2></div>
-    <div class="footerRight">
-      <p>KORE DECOR is a premium furniture studio serving Wagholi and Pune. Enquire for sofas, beds, centre tables, swings, wardrobes and custom furniture.</p>
-      <p class="contact">☎ 8484861930<br>✉ koredecor3@gmail.com<br>📍 Wagholi, Pune, Maharashtra</p>
-      <div class="footerBtns"><a class="lightBtn" href="tel:+918484861930">Call KORE DECOR</a><a class="lineBtn" href="https://wa.me/918484861930?text=Hi%20KORE%20DECOR%2C%20I%20want%20to%20enquire%20about%20your%20furniture">WhatsApp →</a></div>
-    </div>
-  </div>
-  <div class="bottom"><span>© 2026 KORE DECOR. All rights reserved.</span><span>Wagholi, Pune · Mon–Sun 10:00–20:00</span></div>
-</div>
-
-<div class="footerStudio">
-  <button onclick="openAdminLogin()" aria-label="Open Studio Panel">
-    <span class="studioDot"></span> Studio Panel
-  </button>
-</div>
-
-</footer>
-
-<a class="floating" href="https://wa.me/918484861930?text=Hi%20KORE%20DECOR%2C%20I%20want%20to%20enquire%20about%20your%20furniture" aria-label="WhatsApp">◔</a>
-
-<div class="overlay" id="overlay" onclick="closeAll()"></div>
-<aside class="drawer" id="drawer">
-  <div class="drawerHead"><div class="brand">KORE<small>DECOR • LUXURY FURNITURE</small></div><button class="close" onclick="closeAll()">×</button></div>
-  <nav class="drawerLinks">
-    <a href="#home" onclick="closeAll()">Home</a><a href="#collections" onclick="closeAll()">Collections</a><a href="#catalog" onclick="closeAll()">Furniture Gallery</a><a href="#custom" onclick="closeAll()">Custom Studio</a><a href="#gallery" onclick="closeAll()">Our Work</a><a href="#reviews" onclick="closeAll()">Reviews</a><a href="#contact" onclick="closeAll()">Contact</a>
-  </nav>
-  <button class="lightBtn" style="width:100%;margin-top:28px" onclick="closeAll();openInquiry('General Enquiry')">Get a Quote →</button>
-</aside>
-
-<div class="modal" id="inquiryModal">
-  <div class="modalHead"><div><div class="eyebrow">KORE DECOR</div><h3>Make an enquiry.</h3></div><div style="display:flex;gap:7px;align-items:center"><button class="filter" onclick="logoutAdmin()">Logout</button><button class="close" style="color:#222;border-color:#2223" onclick="closeAll()">×</button></div></div>
-  <form class="form" onsubmit="submitInquiry(event)">
-    <label>Name</label><input id="inqName" required placeholder="Your name">
-    <label>Phone / WhatsApp</label><input id="inqPhone" required inputmode="tel" placeholder="10-digit number">
-    <input id="inquiryEmail" type="email" placeholder="Email address (optional)">
-    <label>Product / Category</label><input id="inqProduct" required placeholder="e.g. L-Shape Sofa">
-    <label>Message</label><textarea id="inqMessage" placeholder="Tell us what you need..."></textarea>
-    <button type="submit">Continue on WhatsApp →</button>
-  </form>
-</div>
-
-<div class="modal" id="reviewModal">
-  <div class="modalHead"><div><div class="eyebrow">Customer review</div><h3>Share your experience.</h3></div><button class="close" style="color:#222;border-color:#2223" onclick="closeAll()">×</button></div>
-  <form class="form" onsubmit="submitReview(event)">
-    <label>Your name</label><input id="revName" required placeholder="Your name">
-    <label>Rating</label><select id="revRating"><option value="5">★★★★★ — Excellent</option><option value="4">★★★★☆ — Very good</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Okay</option><option value="1">★☆☆☆☆ — Poor</option></select>
-    <label>Your review</label><textarea id="revText" required placeholder="Tell other customers about your experience..."></textarea>
-    <label>Your photo (optional)</label><input id="revPhoto" type="file" accept="image/*">
-    <button type="submit">Publish Review →</button>
-  </form>
-</div>
-
-<div class="modal" id="searchModal">
-  <div class="modalHead"><div><div class="eyebrow">Search KORE</div><h3>Find your piece.</h3></div><button class="close" style="color:#222;border-color:#2223" onclick="closeAll()">×</button></div>
-  <form class="form" onsubmit="searchProducts(event)"><input id="searchInput" placeholder="Sofa, bed, table, swing..."><button type="submit">Search →</button></form>
-</div>
-
-
-
-<div class="modal adminLoginModal" id="adminLoginModal">
-  <div class="modalHead">
-    <div><div class="eyebrow">KORE DECOR · PRIVATE</div><h3>Studio Panel</h3></div>
-    <button class="close" style="color:#222;border-color:#2223" onclick="closeAll()">×</button>
-  </div>
-  <p class="adminNote">Sign in to manage collections, products and customer enquiries.</p>
-  <form class="form" onsubmit="adminLogin(event)">
-    <label>Username</label>
-    <input id="adminUsername" autocomplete="username" required placeholder="Username">
-    <label>Password</label>
-    <input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Password">
-    <button type="submit">Login to Studio →</button>
-    <div id="adminLoginError" style="font-size:10px;color:#a44;min-height:14px"></div>
-  </form>
-</div>
-
-<div class="modal adminModal" id="adminModal">
-  <div class="modalHead">
-    <div><div class="eyebrow">KORE DECOR · ADMIN</div><h3>Manage Products</h3></div>
-    <button class="close" style="color:#222;border-color:#2223" onclick="closeAll()">×</button>
-  </div>
-  
-
-  <div class="notificationSettings" id="notificationSettings">
-    <div>
-      <div class="eyebrow">LEAD NOTIFICATIONS</div>
-      <h4>Where should new enquiries go?</h4>
-      <p>Studio Panel will always save enquiries here. You can also configure your business email and WhatsApp number below.</p>
-    </div>
-    <div class="notifyFields">
-      <input id="notifyEmail" type="email" placeholder="Business Gmail, e.g. koredecor@gmail.com">
-      <input id="notifyWhatsapp" inputmode="numeric" placeholder="WhatsApp number with country code, e.g. 919876543210">
-      <button class="filter" onclick="saveNotificationSettings()">Save Notification Settings</button>
-    </div>
-    <small>Automatic Gmail/WhatsApp delivery needs a secure email service/backend and WhatsApp Business Cloud API. The browser version can prepare/open the message immediately.</small>
-  </div>
-<div class="adminDashboard" id="adminDashboard">
-  <div class="dashboardStats">
-    <div><span>Products</span><b id="dashProducts">0</b></div>
-    <div><span>Categories</span><b id="dashCategories">0</b></div>
-    <div><span>Enquiries</span><b id="dashEnquiries">0</b></div>
-    <div><span>Reviews</span><b id="dashReviews">0</b></div>
-  </div>
-  <div class="adminTabs">
-    <button class="adminTab active" onclick="switchAdminTab('products',this)">Products</button>
-    <button class="adminTab" onclick="switchAdminTab('enquiries',this)">Order Queries</button>
-    <button class="adminTab" onclick="switchAdminTab('reviews',this)">Reviews</button>
-  </div>
-  <div id="adminProductsTab">
-<p class="adminNote">Add unlimited furniture cards to the Latest Collections strip. Changes are saved in this browser. For a live multi-device admin system, connect the same interface to a database later.</p>
-  <div class="adminGrid">
-    <form class="form" onsubmit="saveAdminProduct(event)">
-      <input type="hidden" id="adminEditId">
-      <label>Product name</label><input id="adminName" required placeholder="e.g. Milano Lounge Sofa">
-      <label>Category</label>
-      <select id="adminCategory">
-        <option>Sofas</option><option>Centre Tables</option><option>Beds</option><option>Jhula / Swings</option>
-        <option>Wardrobes</option><option>Chairs</option><option>Antique Items</option><option>Custom Furniture</option>
-      </select>
-      <label>Price</label><input id="adminPrice" required placeholder="₹45,000">
-      <label>Short description</label><input id="adminDesc" placeholder="Premium fabric · Custom finish">
-      <label>Product photo</label><input id="adminImage" type="file" accept="image/*">
-      <input id="adminImageUrl" placeholder="Or paste an image URL">
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button type="submit" id="adminSaveBtn">Add Product →</button>
-        <button type="button" class="filter" onclick="resetAdminForm()">Clear</button>
-      </div>
-    </form>
-    <div>
-      <div class="adminListHead"><b>Products in Latest Collections</b><span id="adminCount"></span></div>
-      <div id="adminProducts"></div>
-  </div>
-  <div id="adminEnquiriesTab" style="display:none">
-    <div id="adminEnquiries"></div>
-  </div>
-  <div id="adminReviewsTab" style="display:none">
-    <div id="adminReviews"></div>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
-<div class="toast" id="toast"></div>
-
-<script src="script.js"></script>
+  <main class="card">
+    <p class="eyebrow">KORE DECOR</p>
+    <h1>Static site removed</h1>
+    <p>This Kore Decor static site has been removed from the repository. If you want, I can help set up a new app, landing page, or full website in its place.</p>
+  </main>
 </body>
 </html>
