@@ -1,6 +1,0 @@
-KORE-DECOR-FULL-SOURCE/
-├── index.html
-├── style.css
-├── script.js
-├── README.txt
-└── PROJECT-STRUCTURE.txt
